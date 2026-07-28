@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Leo Store — Leo Books</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Leo Store</h1>
+    <nav>
+      <a href="/store">Store</a> |
+      <a href="/notifications">Notifications</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="product">
+      <h2>Leo Book</h2>
+      <p>A paper computer — the Leo Book. Handcrafted, printed, and assembled. Perfect for ideas, sketches, and low-power computing.</p>
+      <p class="price">Price: $29.00 (paper edition)</p>
+      <button id="orderBtn">Order a Leo Book</button>
+    </section>
+
+    <div id="orderForm" class="modal hidden">
+      <div class="modal-content">
+        <h3>Order Leo Book</h3>
+        <form id="form">
+          <label>Name<br><input name="name" required></label>
+          <label>Email<br><input name="email" type="email" required></label>
+          <label>Quantity<br><input name="quantity" type="number" min="1" value="1" required></label>
+          <label>Message (optional)<br><textarea name="message"></textarea></label>
+          <div class="actions">
+            <button type="submit">Send Order</button>
+            <button type="button" id="cancel">Cancel</button>
+          </div>
+        </form>
+        <div id="status"></div>
+      </div>
+    </div>
+
+  </main>
+  <script src="/store.js"></script>
+</body>
+</html>
